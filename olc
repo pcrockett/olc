@@ -617,7 +617,7 @@ class CliParser(ArgumentParser):
 
 def parse_args() -> CliArgs:
     args = CliParser().parse_args()
-    if len(args.input) == 0:
+    if len(args.input) == 0 and not args.version:
         CliParser().print_help()
         exit(1)
 
